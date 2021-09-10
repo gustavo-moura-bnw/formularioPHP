@@ -16,21 +16,28 @@ class UsuarioDAO extends BaseDAO
 
             return $query->fetch();
 
-        }catch (Exception $e){
+        }catch (\Exception $e){
             throw new \Exception("Erro no acesso aos dados.", 500);
         }
     }
 
     public  function salvar(Usuario $usuario) {
         try {
-            $nome      = $usuario->getNome();
-            $email     = $usuario->getEmail();
+            $nome         = $usuario->getNome();
+            $email        = $usuario->getEmail();
+            $login        = $usuario->getLogin();
+            $senha        = $usuario->getSenha();
+            $status       = $usuario->getStatus();
+
             return $this->insert(
                 'usuario',
-                ":nome,:email",
+                ":nome,:email,:login,:senha,:status",
                 [
                     ':nome'=>$nome,
-                    ':email'=>$email
+                    ':email'=>$email,
+                    ':login'=>$login,
+                    ':senha'=>$senha,
+                    ':status'=>$status
                 ]
             );
 

@@ -34,6 +34,9 @@ $().ready(function() {
             },
             senha: {
                 required: "Este campo não pode ser vazio"
+            },
+            login: {
+                required: "Este campo não pode ser vazio"
             }
         }
     });

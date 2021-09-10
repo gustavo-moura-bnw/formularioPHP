@@ -20,11 +20,11 @@ class App
          */
         define('APP_HOST'       , $_SERVER['HTTP_HOST']);
         define('PATH'           , realpath('./'));
-        define('TITLE'          , "Primeira aplicação MVC em PHP - DevMedia");
+        define('TITLE'          , "Formulário PHP");
         define('DB_HOST'        , "localhost");
         define('DB_USER'        , "root");
         define('DB_PASSWORD'    , "");
-        define('DB_NAME'        , "devmedia");
+        define('DB_NAME'        , "formulariophp");
         define('DB_DRIVER'      , "mysql");
 
         $this->url();

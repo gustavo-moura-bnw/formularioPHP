@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Lib\Criptografia;
 use App\Lib\Sessao;
 use App\Models\DAO\UsuarioDAO;
 use App\Models\Entidades\Usuario;
@@ -21,6 +22,10 @@ class UsuarioController extends Controller
         $Usuario = new Usuario();
         $Usuario->setNome($_POST['nome']);
         $Usuario->setEmail($_POST['email']);
+        $Usuario->setLogin($_POST['login']);
+        $Usuario->setStatus(0);
+        $Usuario->setSenha(Criptografia::criptografar($_POST['senha']));
+
 
         Sessao::gravaFormulario($_POST);
 
