@@ -31,6 +31,9 @@ $().ready(function() {
             email: {
                 required: "Este campo não pode ser vazio",
                 email: "Email com formato inválido"
+            },
+            senha: {
+                required: "Este campo não pode ser vazio"
             }
         }
     });

@@ -17,6 +17,10 @@
                     <label for="email">E-mail</label>
                     <input type="email" class="form-control" name="email" placeholder="" value="<?php echo $Sessao::retornaValorFormulario('email'); ?>" required>
                 </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" class="form-control" name="senha" placeholder="" value="<?php echo $Sessao::retornaValorFormulario('senha'); ?>" required>
+                </div>
 
                 <button type="submit" class="btn btn-success btn-sm">Salvar</button>
             </form>
