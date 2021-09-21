@@ -21,7 +21,7 @@ class UsuarioDAO extends BaseDAO
         }
     }
 
-    public  function salvar(Usuario $usuario) {
+    public function salvar(Usuario $usuario) {
         try {
             $nome         = $usuario->getNome();
             $email        = $usuario->getEmail();
